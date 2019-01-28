@@ -105,8 +105,28 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   // Override the current require with this new one
   return newRequire;
 })({"index.js":[function(require,module,exports) {
-console.log("Hello Parcel");
-},{}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+/*
+    Write a program that prints the number from 1 t0 100.
+    Print "Fizz" when number is multiple with 3.
+    Print "Buzz" when number is multiple with 5.
+    Print "FizzBuzz" when number is multiple with 3 and 5 (3 * 5 = 15)
+*/
+fizzbuzzlisting = function fizzbuzzlisting() {
+  for (var i = 1; i < 101; i++) {
+    if (i % 15 == 0) {
+      console.log("FizzBuzz");
+    } else if (i % 3 == 0) {
+      console.log("Fizz");
+    } else if (i % 5 == 0) {
+      console.log("Buzz");
+    } else {
+      console.log(i);
+    }
+  }
+};
+
+fizzbuzzlisting();
+},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -133,7 +153,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52835" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53798" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
@@ -275,5 +295,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/fizzbuzz_test.e31bb0bc.map
